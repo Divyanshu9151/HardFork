@@ -7,18 +7,18 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
     "@portis/web3": "^3.0.3",
-    "react": "^17.0.1",
+    "react": "latest",
     "keccak256": "^1.0.2",
     "bootstrap": "^4.5.3",
     "formik": "^2.2.5",
     "jquery": "^3.5.1",
     "react-bootstrap": "^1.4.0",
-    "react-dom": "^17.0.1",
+    "react-dom": "latest",
     "react-icons": "^4.1.0",
-    "react-scripts": "4.0.2",
-    "react-qr-code": "^1.0.3",
-    "react-qr-scanner": "0.0.11",
-    "react-router-dom": "^5.2.0",
+    "react-scripts": "latest",
+    "react-qr-code": "^2.0.11",
+    "react-qr-scanner": "latest",
+    "react-router-dom": "latest",
     "react-transition-group": "^4.4.1",
     "web-vitals": "^1.1.0",
     "recoil": "^0.1.2",
@@ -50,6 +50,6 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^5.0.0"
+    "node-sass": "^8.0.0"
   }
 }

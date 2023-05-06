@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import {
-  BrowserRouter as Router, Switch, Route, Redirect
+  BrowserRouter as Router, Routes, Route, Redirect
 } from "react-router-dom";
 import Header from './components/header';
 import Footer from './components/footer';
@@ -20,13 +20,13 @@ const QRCode = lazy(() => import('./pages/qrcode'))
 const AddOwner = lazy(() => import('./pages/addOwner'))
 const RegisterSeller = lazy(() => import('./pages/registerSeller'))
 
-function Routes() {
+function Rout() {
 
   return (
     <>
       <Router>
         <Route component={Header} />
-        <Switch>
+        <Rout>
           <Route path="/" exact component={Home} />
           <Route path="/scan" exact component={Scan} />
           <Route path='/qrcode' component={QRCode} />
@@ -55,10 +55,11 @@ function Routes() {
           <PrivateRoute path='/registerSeller'>
             <RegisterSeller />
           </PrivateRoute>
-        </Switch>
+        </Rout>
         <Route component={Footer} />
       </Router>
       <Toast />
+
     </>
   );
 }
@@ -76,4 +77,4 @@ function PrivateRoute({ children, ...rest }) {
     />
   );
 }
-export default Routes;
+export default Rout;

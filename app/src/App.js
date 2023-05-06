@@ -1,4 +1,4 @@
-import Routes from './Routes'
+import Rout from './Routes'
 import './static/css/app.scss'
 import { useEffect, useState } from 'react'
 import Loader from './components/loader'
@@ -6,8 +6,9 @@ import provider from './store/web3Provider'
 
 function App() {
   const [loaded, setLoaded] = useState(false);
-
+  console.log("testing00");
   useEffect(() => {
+    console.log("testing01");
     async function setProvider() {
       await provider.setProvider()
       await provider.setContract();
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <div>
-      {(loaded) ? <Routes /> : <Loader />}
+      {(loaded) ? <Rout /> : <Loader />}
     </div>
   );
 }

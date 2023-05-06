@@ -4,13 +4,13 @@ import Abi from './abi'
 import keccak256 from 'keccak256'
 // private ganache node...
 const myPrivateEthereumNode = {
-    nodeUrl: 'https://rpc-mumbai.matic.today', // node url
-    chainId: 80001, // chainid
+    nodeUrl: '127.0.0.1:7545', // node url
+    chainId: 5777    , // chainid
 };
 
 const provider = {
-    contractAddress: '0xac9c38118f05792Bf379479E3912F35d17F65819',
-    buyAddress: '0x63a8656265d04Fe4c11F4b81e3d1E061b582177d',
+    contractAddress: '0x6F28610a588c1CE4E6A9919A8Dc8Fa1D6F58E257',
+    buyAddress: '0x16b59937985F454b5df7a643b11b95821A80E920',
     w3: null,
     account: null,
     contract: null,
@@ -48,13 +48,22 @@ const provider = {
     },
 
     setProvider: async function () {
+        console.log("testing");
         this.portis = await new Portis('42dca739-f49f-4002-a181-82cdaadc7dd5', myPrivateEthereumNode);
+        console.log("testing2");
+
         this.w3 = await new Web3(this.portis.provider)
+        console.log("testing3");
+
     },
 
     setContract: async function () {
+        console.log("testing 4");
         const contract = await new this.w3.eth.Contract(Abi.counterfeitAbi, this.contractAddress);
+        console.log("testing5");
+
         const side = await new this.w3.eth.Contract(Abi.buyAbi, this.buyAddress)
+        console.log("testing6");
         this.buyContract = side
         this.contract = contract;
     },

@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "i": "^0.3.7",
+    "npm": "^9.6.5",
+    "tabookey-gasless": "^0.4.5",
     "truffle-hdwallet-provider": "^1.0.17"
   }
 }
